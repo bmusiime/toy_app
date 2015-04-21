@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def Agandi
     render text: "Hallo, Agandi!"
+    
   end
 
 end
