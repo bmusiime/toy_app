@@ -11,3 +11,9 @@ two:
   name: MyString
   password: MyString
   confirmPassword: MyString
+  
+michael:
+  username: MyString
+  name: MyString
+  password: MyString
+  confirmPassword: MyString
