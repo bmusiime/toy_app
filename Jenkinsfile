@@ -3,8 +3,10 @@ node {
             checkout scm
         }
         stage('build'){
+        sudo gem install bundle
         bundle install
-        rake db:create
-        rails server
+        }
+        stage('test'){
+        rails test
         }
     }
