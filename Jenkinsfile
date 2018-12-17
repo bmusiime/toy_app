@@ -3,7 +3,8 @@ node {
             checkout scm
         }
         stage('build'){
-        sudo gem install bundler
+        rvm install 2.3.3
+        gem install bundler
         bundle install
         }
         stage('test'){
