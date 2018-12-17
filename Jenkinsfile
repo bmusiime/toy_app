@@ -5,14 +5,14 @@ node {
         }
         stage('build'){
                 echo 'install rvm'
-                rvm install 2.3.0
+                sh 'rvm use --install --create 2.3.1'
                 echo 'install bundler'
-                gem install bundler
+                sh 'gem install bundler'
                 echo 'install dependecies'
-                bundle install
+                sh 'bundle install'
         }
         stage('test'){
                 echo 'Start testing'
-                rails test
+                sh 'rails test'
         }
     }
