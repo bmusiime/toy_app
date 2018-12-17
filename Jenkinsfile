@@ -1,13 +1,18 @@
 node {
         stage('checkout'){
-            checkout scm
+                echo 'pull project from git'
+                checkout scm
         }
         stage('build'){
-        rvm install 2.3
-        gem install bundler
-        bundle install
+                echo 'install rvm'
+                rvm install 2.3
+                echo 'install bundler'
+                gem install bundler
+                echo 'install dependecies'
+                bundle install
         }
         stage('test'){
-        rails test
+                echo 'Start testing'
+                rails test
         }
     }
