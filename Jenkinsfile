@@ -5,7 +5,7 @@ node {
         }
         stage('build'){
                 echo 'install rvm'
-                rvm install 2.3
+                rvm install 2.3.0
                 echo 'install bundler'
                 gem install bundler
                 echo 'install dependecies'
