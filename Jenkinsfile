@@ -4,11 +4,9 @@ node {
                 checkout scm
         }
         stage('build'){
-                echo 'install rvm'
-                sh 'rvm use --install --create 2.3.1'
-                echo 'install bundler'
-                sh 'gem install bundler'
+                
                 echo 'install dependecies'
+                sh 'cd toy_app'
                 sh 'bundle install'
         }
         stage('test'){
