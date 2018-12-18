@@ -6,7 +6,7 @@ node {
         stage('build'){
                 
                 echo 'install dependecies'
-                sh 'cd toy_app'
+                sh 'ls -l'
                 sh 'bundle install'
         }
         stage('test'){
