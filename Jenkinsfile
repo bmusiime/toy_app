@@ -3,13 +3,13 @@ node {
                 echo 'pull project from git'
                 checkout scm
         }
-        stage('example1'){
-                echo 'add jenkins'
-                sh 'usermod -a -G rvm jenkins'
-        }
         stage('rvmSource'){
                 echo 'add jenkins'
                 sh 'source /etc/profile.d/rvm.sh'
+        }
+        stage('install'){
+                echo 'add jenkins'
+                sh 'rvm install'
         }
         stage('build'){
                 echo 'install dependecies'
