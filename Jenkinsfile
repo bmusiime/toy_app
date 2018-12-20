@@ -12,10 +12,10 @@ node {
                 //sh 'usermod -a -G rvm toyuser'
                 //sh 'usermod -a -G rvm jenkins'
                 //sh '. /etc/profile.d/rvm.sh'
-                sh 'ls $HOME/.rvm/scripts -l'
+                sh 'ls /Users/Shared/Jenkins/.rvm/scripts'
                 //sh 'ls $HOME/.rvm/scripts/rvm -l'
-                sh 'cat [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" >> ~/.profile'
-                sh 'cat [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" >> ~/.bash_profile'
+                sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.profile'
+                sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
                 sh '. ~/.bash_profile'
                 sh 'ls -l'
                 }
