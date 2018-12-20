@@ -11,7 +11,8 @@ node {
                 //sh 'usermod -a -G rvm root'
                 //sh 'usermod -a -G rvm toyuser'
                 //sh 'usermod -a -G rvm jenkins'
-                sh '. /etc/profile.d/rvm.sh'
+                //sh '. /etc/profile.d/rvm.sh'
+                sh 'ls -l'
                 sh 'rvm install'
                 sh 'gem install bundler'
         }
