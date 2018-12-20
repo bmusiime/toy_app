@@ -33,6 +33,7 @@ node {
                 //sh 'ls -l'
                 }
         stage('rvm'){
+                sh '. ~/.bash_profile'
                 sh 'rvm install'
                 }
         stage('start'){
