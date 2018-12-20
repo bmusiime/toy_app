@@ -21,7 +21,7 @@ node {
                 //sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
                 //sh 'echo export PATH="$PATH:$HOME/.rvm/bin" >> .bashrc'
                 //sh 'echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-                sh 'cat source "$HOME/.profile" >> ~/.bash_profile'
+                sh 'cat . "$HOME/.profile" >> ~/.bash_profile'
                 sh '. ~/.bash_profile'
                 //sh 'ls -l'
                 sh 'rvm install'
