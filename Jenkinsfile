@@ -15,10 +15,10 @@ node {
                 sh 'ls /Users/Shared/Jenkins/.rvm/scripts'
                 //sh 'ls $HOME/.rvm/scripts/rvm -l'
                 //sh 'cat "/Users/Shared/Jenkins/.rvm/scripts/rvm && . /Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.profile'
-                sh 'cat /Users/Shared/Jenkins/.rvm/scripts/rvm >> ~/.bash_profile'
-                sh 'cat source /Users/Shared/Jenkins/.rvm/scripts/rvm >> ~/.bash_profile'
+                sh 'echo "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
+                sh 'echo ". /Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
                 //sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
-                sh 'source ~/.bash_profile'
+                sh '. ~/.bash_profile'
                 //sh 'ls -l'
                 sh 'rvm install'
                 }
