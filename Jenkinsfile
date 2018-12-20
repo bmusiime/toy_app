@@ -14,6 +14,8 @@ node {
                 //sh '. /etc/profile.d/rvm.sh'
                 sh '. ~/.bash_profile'
                 sh 'ls -l'
+                }
+        stage('start'){
                 sh 'rvm install'
                 sh 'gem install bundler'
         }
