@@ -17,7 +17,7 @@ node {
                 //sh 'ls $HOME/.rvm/scripts/rvm -l'
                 //sh 'cat "/Users/Shared/Jenkins/.rvm/scripts/rvm && . /Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.profile'
                 //sh 'echo "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
-                //sh 'echo ". /Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
+                sh 'echo "export PATH=$PATH:/opt/rvm/bin:/opt/rvm/sbin" >> ~/.bash_profile'
                 //sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
                 //sh 'echo export PATH="$PATH:$HOME/.rvm/bin" >> .bashrc'
                 //sh 'echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
