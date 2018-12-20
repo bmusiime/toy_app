@@ -12,8 +12,8 @@ node {
                 //sh 'usermod -a -G rvm toyuser'
                 //sh 'usermod -a -G rvm jenkins'
                 //sh '. /etc/profile.d/rvm.sh'
-                sh 'echo "[[ -s '$HOME/.rvm/scripts/rvm' ]] && . '$HOME/.rvm/scripts/rvm'" >> ~/.profile'
-                sh 'echo "[[ -s '$HOME/.rvm/scripts/rvm' ]] && . '$HOME/.rvm/scripts/rvm'" >> ~/.bash_profile'
+                sh 'cat [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" >> ~/.profile'
+                sh 'cat [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" >> ~/.bash_profile'
                 sh '. ~/.bash_profile'
                 sh 'ls -l'
                 }
