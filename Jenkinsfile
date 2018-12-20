@@ -21,10 +21,18 @@ node {
                 //sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
                 //sh 'echo export PATH="$PATH:$HOME/.rvm/bin" >> .bashrc'
                 //sh 'echo [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+                }
+        stage('bash_profile'){
                 sh 'cat ~/.bash_profile'
+                }
+        stage('profile'){
                 sh 'cat ~/.profile'
+                }
+        stage('zshrc'){
                 sh 'cat ~/.zshrc'
                 //sh 'ls -l'
+                }
+        stage('rvm'){
                 sh 'rvm install'
                 }
         stage('start'){
