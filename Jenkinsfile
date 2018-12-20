@@ -5,6 +5,7 @@ node {
         }
         stage('build'){
                 echo 'install dependecies'
+                sh 'whoami'
                 sh 'ls -l'
                 sh 'bundle install'
         }
