@@ -14,10 +14,11 @@ node {
                 //sh '. /etc/profile.d/rvm.sh'
                 sh 'ls /Users/Shared/Jenkins/.rvm/scripts'
                 //sh 'ls $HOME/.rvm/scripts/rvm -l'
-                //sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.profile'
-                //sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
-                sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
-                sh 'ls -l'
+                sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.profile'
+                sh 'cat [[ -s "/Users/Shared/Jenkins/.rvm/scripts/rvm" ]] && . "/Users/Shared/Jenkins/.rvm/scripts/rvm" >> ~/.bash_profile'
+                //sh '. /Users/Shared/Jenkins/.rvm/scripts/rvm'
+                sh 'source ~/.bash_profile'
+                //sh 'ls -l'
                 }
         stage('start'){
                 sh 'rvm install'
